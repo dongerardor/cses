@@ -1,32 +1,33 @@
-applicants_apartments_diff_input = input()
-desired_sizes_input = input()
-apartment_sizes_input = input()
+""" 
+Input:
 
-applicants = 0
-apartments_qty = 0
-diff = 0
+4 3 5
+60 45 80 60
+30 60 75
 
-applicants, apartments_qty, diff = [int(x) for x in applicants_apartments_diff_input.split()]
-desired_sizes = [int(x) for x in desired_sizes_input.split()]
+Output:
+2
 
-def is_in_range(apartment, desired_size, diff):
-    if apartment >= desired_size - diff:
-        if apartment <= desired_size + diff:
-            return True
-    return False
+"""
 
-apartments = sorted([int(x) for x in apartment_sizes_input.split()])
+applicants_qty, apartments_qty, diff = map(int, input().split())
+applicants = sorted(list(map(int, input().split())))
+apartments = sorted(list(map(int, input().split())))
 
-apartments_assigned = 0
+i = 0 # applicants cursor
+j = 0 # apartments cursor
+sold = 0
+while i < len(applicants) and j < len(apartments):
+    is_bigger = apartments[j] > applicants[i] + diff
+    is_smaller = apartments[j] < applicants[i] - diff
 
-for desired_size in desired_sizes:
-    for i, apartment in enumerate(apartments):
-        if is_in_range(apartment, desired_size, diff):
-            apartments_assigned += 1
-
-# print(applicants)
-# print(apartments)
-# print(diff)
-# print(desired_sizes)
-# print(apartment_sizes)
-#while apartment < len(apartments):
+    if is_bigger:
+        i += 1
+    elif is_smaller:
+        j += 1
+    else:
+        i += 1
+        j += 1
+        sold += 1
+    
+print(sold)
