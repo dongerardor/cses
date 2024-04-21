@@ -70,3 +70,5 @@ print(my_list_reversed3)
 
 last_index = len(my_list) - my_list[::-1].index(2) - 1
 print(last_index)  # Output: 6
+
+
