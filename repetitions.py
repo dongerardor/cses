@@ -6,7 +6,7 @@ Output
 Print one integer: the length of the longest repetition.
 Constraints
 
-1 \le n \le 10^6
+1 <= n <= 10^6
 
 Example
 Input:

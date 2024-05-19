@@ -9,8 +9,8 @@ Output
 For each test, print the number in row y and column x.
 Constraints
 
-1 \le t \le 10^5
-1 \le y,x \le 10^9
+1 <= t <= 10^5
+1 <= y,x <= 10^9
 
 Example
 Input:

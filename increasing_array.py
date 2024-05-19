@@ -9,8 +9,8 @@ Output
 Print the minimum number of moves.
 Constraints
 
-1 \le n \le 2 \cdot 10^5
-1 \le x_i \le 10^9
+1 <= n <= 2 \cdot 10^5
+1 <= x_i <= 10^9
 
 Example
 Input:
